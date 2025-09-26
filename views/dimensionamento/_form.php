@@ -119,15 +119,15 @@ if ($model->isNewRecord) {
     $model->updated_at = time();
 }
 
+function tooltip($text) {
+    return '<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="top" title="' . htmlspecialchars($text) . '">
+                <i class="fas fa-info-circle text-primary"></i>
+            </span>';
+}
+
 ?>
 
 <div class="dimensionamento-form">
-
-    <hr>
-
-    <div class="alert alert-info" role="alert">
-        <strong>OBS:</strong> Todos os termos técnicos e maiores detalhes estão disponíveis ao final desta página, após as seções de simulação.
-    </div>
 
     <hr>
 
@@ -450,18 +450,21 @@ if ($model->isNewRecord) {
             <div class="row">
                 <div class="col-lg-4">
                     <p>
+                        <?= tooltip('Energia consumida diariamente em corrente contínua (Lcc)') ?>
                         <strong>Lcc:</strong> 
                         <span id="lcc-value">-</span> [W.h/dia]
                     </p>
                 </div>
                 <div class="col-lg-4">
                     <p>
+                        <?= tooltip('Energia consumida diariamente em corrente alternada (Lca)') ?>
                         <strong>Lca:</strong> 
                         <span id="lca-value">-</span> [W.h/dia]
                     </p>
                 </div>
                 <div class="col-lg-4">
                     <p>
+                        <?= tooltip('Energia ativa diária total do sistema (L)') ?>
                         <strong>L:</strong> 
                         <span id="ltotal-value">-</span> [W.h/dia]
                     </p>
@@ -498,15 +501,22 @@ if ($model->isNewRecord) {
             <div class="row">
                 <div class="col-lg-4">
                     <p>
+                        <?= tooltip('Mínima tensão de operação do controlador MPPT (Vmppt,min)') ?>
                         <strong>Vmppt,min:</strong> 
                         <span id="mppt-vmpptmin-value">-</span> [Vcc]
                     </p>
                 </div>
                 <div class="col-lg-4">
-                    <p><strong>Vmppt,max:</strong> <span id="mppt-vmpptmax-value">-</span> [Vca]</p>
+                    <p>
+                        <?= tooltip('Máxima tensão de operação do controlador MPPT (Vmppt,max)') ?>
+                        <strong>Vmppt,max:</strong> <span id="mppt-vmpptmax-value">-</span> [Vca]
+                    </p>
                 </div>
                 <div class="col-lg-4">
-                    <p><strong>Ictl:</strong> <span id="mppt-ictl-value">-</span> [A]</p>
+                    <p>
+                        <?= tooltip('Corrente máxima de operação do controlador MPPT (Ictl)') ?>
+                        <strong>Ictl:</strong> <span id="mppt-ictl-value">-</span> [A]
+                    </p>
                 </div>
             </div>
         </div>
@@ -528,46 +538,81 @@ if ($model->isNewRecord) {
         <div class="row text-center align-items-center" style="justify-content: center;">
             <div class="row">
                 <div class="col-lg-4 text-center">
-                    <p><strong>C:</strong> <span id="painel-c-value">-</span> [m]</p>
+                    <p>
+                        <?= tooltip('Comprimento do painel (C)') ?>
+                        <strong>C:</strong> <span id="painel-c-value">-</span> [m]
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <p><strong>L:</strong> <span id="painel-l-value">-</span> [m]</p>
+                    <p>
+                        <?= tooltip('Largura do painel (L)') ?>
+                        <strong>L:</strong> <span id="painel-l-value">-</span> [m]
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <p><strong>Área Mínima de Painéis:</strong> <span id="painel-areamin-value">-</span> [m²]</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 text-center">
-                    <p><strong>Pmax:</strong> <span id="painel-pmax-value">-</span> [W]</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <p><strong>Imax:</strong> <span id="painel-imax-value">-</span> [A]</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <p><strong>Vmax:</strong> <span id="painel-vmax-value">-</span> [V]</p>
+                    <p>
+                        <strong>Área Mínima de Painéis:</strong> <span id="painel-areamin-value">-</span> [m²]
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 text-center">
-                    <p><strong>Voc:</strong> <span id="painel-voc-value">-</span> [V]</p>
+                    <p>
+                        <?= tooltip('Potência máxima do painel (Pmax)') ?>
+                        <strong>Pmax:</strong> <span id="painel-pmax-value">-</span> [W]
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <p><strong>Icc:</strong> <span id="painel-icc-value">-</span> [A]</p>
+                    <p>
+                        <?= tooltip('Corrente máxima do painel (Imax)') ?>
+                        <strong>Imax:</strong> <span id="painel-imax-value">-</span> [A]
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <p><strong>Tmin,oper:</strong> <span id="painel-tminoper-value">-</span> [ºC]</p>
+                    <p>
+                        <?= tooltip('Tensão máxima do painel (Vmax)') ?>
+                        <strong>Vmax:</strong> <span id="painel-vmax-value">-</span> [V]
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 text-center">
-                    <p><strong>Tmax,oper:</strong> <span id="painel-tmaxoper-value">-</span> [ºC]</p>
+                    <p>
+                        <?= tooltip('Tensão de circuito aberto do painel (Voc)') ?>
+                        <strong>Voc:</strong> <span id="painel-voc-value">-</span> [V]
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <p><strong>Beta:</strong> <span id="painel-beta-value">-</span> [1/ºC]</p>
+                    <p>
+                        <?= tooltip('Corrente de curto-circuito do painel (Icc)') ?>
+                        <strong>Icc:</strong> <span id="painel-icc-value">-</span> [A]
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <p><strong>Pm (a priori):</strong> <span id="painel-pmwp-value">-</span> [Wp]</p>
+                    <p>
+                        <?= tooltip('Temperatura mínima de operação do painel (Tmin,oper)') ?>
+                        <strong>Tmin,oper:</strong> <span id="painel-tminoper-value">-</span> [ºC]
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <p>
+                        <?= tooltip('Temperatura máxima de operação do painel (Tmax,oper)') ?>
+                        <strong>Tmax,oper:</strong> <span id="painel-tmaxoper-value">-</span> [ºC]
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <p>
+                        <?= tooltip('Coeficiente de temperatura do painel (Beta)') ?>
+                        <strong>Beta:</strong> <span id="painel-beta-value">-</span> [1/ºC]
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <p>
+                        <?= tooltip('Potência necessária dos painéis inicialmente (Pm,a priori)') ?>
+                        <strong>Pm (a priori):</strong> <span id="painel-pmwp-value">-</span> [Wp]
+                    </p>
                 </div>
             </div>
         </div>
@@ -606,16 +651,28 @@ if ($model->isNewRecord) {
         <p>Portanto...</p>
         <div class="row align-items-center" style="justify-content: center;">
             <div class="col-lg-3 text-center">
-                <p><strong>Pm (final):</strong> <span id="painel-pmwp-final-value">-</span> [Wp]</p>
+                <p>
+                    <?= tooltip('Potência total final dos painéis (Pm)') ?>
+                    <strong>Pm (final):</strong> <span id="painel-pmwp-final-value">-</span> [Wp]
+                </p>
             </div>
             <div class="col-lg-3 text-center">
-                <p><strong>Área (final):</strong> <span id="painel-area-final-value">-</span> [m²]</p>
+                <p>
+                    <?= tooltip('Área total final dos painéis (A)') ?>
+                    <strong>Área (final):</strong> <span id="painel-area-final-value">-</span> [m²]
+                </p>
             </div>
             <div class="col-lg-3 text-center">
-                <p><strong>VmpTmin:</strong> <span id="painel-vmptmin-value">-</span> [V]</p>
+                <p>
+                    <?= tooltip('Tensão máxima de operação do painel corrigido pela temperatura mínima local (VmpTmin)') ?>
+                    <strong>VmpTmin:</strong> <span id="painel-vmptmin-value">-</span> [V]
+                </p>
             </div>
             <div class="col-lg-3 text-center">
-                <p><strong>VmpTmax:</strong> <span id="painel-vmptmax-value">-</span> [V]</p>
+                <p>
+                    <?= tooltip('Tensão máxima de operação do painel corrigido pela temperatura máxima local (VmpTmax)') ?>
+                    <strong>VmpTmax:</strong> <span id="painel-vmptmax-value">-</span> [V]
+                </p>
             </div>
         </div>
 
@@ -664,7 +721,9 @@ if ($model->isNewRecord) {
                 <p><strong>Quantidade em Paralelo:</strong> <span id="painel-paralelo-qtde-value">-</span> Painéis</p>
             </div>
             <div class="col-lg-4 text-center">
-                <p><strong>Icurto-circuito:</strong> <span id="painel-paralelo-icurtocircuito-value">-</span> [A]</p>
+                <p>
+                    <strong>Icurto-circuito:</strong> <span id="painel-paralelo-icurtocircuito-value">-</span> [A]
+                </p>
             </div>
             <div class="col-lg-4 text-center">
                 <p><strong>Check:</strong> <span id="painel-paralelo-check">-</span></p>
@@ -740,13 +799,21 @@ if ($model->isNewRecord) {
         </div>
         <div class="row text-center align-items-center" style="justify-content: center;">
             <div class="col-lg-4">
-                <p><strong>CBIc20,bat:</strong> <span id="bateria-cbic20bat-value">-</span> [Ah]</p>
+                <p>
+                    <?= tooltip('Capacidade da bateria unitária para o regime de descarga em 20 horas') ?>
+                    <strong>CBIc20,bat:</strong> <span id="bateria-cbic20bat-value">-</span> [Ah]
+                </p>
             </div>
             <div class="col-lg-4">
-                <p><strong>CBIc20:</strong> <span id="bateria-cbic20-value">-</span> [Ah]</p>
+                <p>
+                    <?= tooltip('Capacidade total necessária da bateria para o regime de descarga em 20 horas') ?>
+                    <strong>CBIc20:</strong> <span id="bateria-cbic20-value">-</span> [Ah]
+                </p>
             </div>
             <div class="col-lg-4">
-                <p><strong>Área Baterias:</strong> <span id="bateria-aream2-value">-</span> [m²]</p>
+                <p>
+                    <strong>Área Baterias:</strong> <span id="bateria-aream2-value">-</span> [m²]
+                </p>
             </div>
         </div>
         <div class="row text-center align-items-center" style="justify-content: center;">
@@ -776,7 +843,10 @@ if ($model->isNewRecord) {
                     <p><strong>Quantidade de MPPT em Paralelo:</strong> <span id="mppt-qtdeparalelo-value">-</span> MPPTs</p>
                 </div>
                 <div class="col-lg-4">
-                    <p><strong>Voc,tmin</strong> <span id="mppt-voctmin-value">-</span> [V]</p>
+                    <p>
+                        <?= tooltip('Tensão de circuito aberto do painel corrigido pela temperatura mínima local (Voc,tmin)') ?>
+                        <strong>Voc,tmin</strong> <span id="mppt-voctmin-value">-</span> [V]
+                    </p>
                 </div>
             </div>
         </div>
@@ -784,12 +854,16 @@ if ($model->isNewRecord) {
         <h5 class="text-center">
             Primeira Condição de Existência: 
             <strong>Npaineis,serie * Voc,tmin < Vcmax</strong>
+            <?= tooltip('A tensão de circuito aberto do painel corrigido pela temperatura mínima local (Voc,tmin), dada a quantidade de painéis em uma "string", deve ser menor que a tensão máxima de entrada do inversor (Vcmax)') ?>
         </h5>
         <p>Portanto...</p>
         <div class="row text-center align-items-center py-2" style="justify-content: center;">
             <div class="row">
                 <div class="col-lg-4">
-                    <p><strong>Npaineis,série * Voc,tmin:</strong> <span id="mppt-fator1-check1-value">-</span> [V]</p>
+                    <p>
+                        <strong>Npaineis,série * Voc,tmin:</strong> 
+                        <span id="mppt-fator1-check1-value">-</span> [V]
+                    </p>
                 </div>
                 <div class="col-lg-4">
                     <p><strong>Vcmax:</strong> <span id="mppt-vcmax-value">-</span> [Vca]</p>
@@ -803,6 +877,7 @@ if ($model->isNewRecord) {
         <h5 class="text-center">
             Segunda Condição de Existência:
             <strong>Pinversor[W] >= Pinstalada [W]</strong>
+            <?= tooltip('A potência do inversor deve ser maior ou igual à potência total instalada no sistema') ?>
         </h5>
         <p>Portanto...</p>
         <div class="row text-center align-items-center py-2" style="justify-content: center;">
@@ -832,6 +907,14 @@ if ($model->isNewRecord) {
 </div>
 
 <script>
+    // Inicializar tooltips do Bootstrap
+    document.addEventListener('DOMContentLoaded', function() {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
 
         // INPUTS DO FORMS
