@@ -1,0 +1,1079 @@
+{
+	"info": {
+		"_postman_id": "a4eea107-ee53-4b20-9d08-57e739b2a458",
+		"name": "Dimensionamento Solar Off Grid",
+		"description": "REST API of \"Dimensionamento Solar Off Grid\" developed by Leonardo Travagini Delboni\n\nSoftware Engineering MBA Thesis - University of São Paulo (USP)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28316911"
+	},
+	"item": [
+		{
+			"name": "Coordenada",
+			"item": [
+				{
+					"name": "Extras",
+					"item": [
+						{
+							"name": "Filter by Fields",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada?fields=id,mmc",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "id,mmc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sort",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada?sort=-id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-id"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fields & Sort",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada?sort=-id&fields=id,mmc",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-id"
+										},
+										{
+											"key": "fields",
+											"value": "id,mmc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pagination",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada?page=2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Per-Page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada?per-page=50",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									],
+									"query": [
+										{
+											"key": "per-page",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Main",
+					"item": [
+						{
+							"name": "Index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{base_bearer}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{base_bearer}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada/72273",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada",
+										"72273"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{base_bearer}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"lat\": 90.0,\r\n  \"long\": 90.0,\r\n  \"mmc\": 100000\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{base_bearer}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"lat\": 11,\r\n    \"long\": 11,\r\n    \"mmc\": 11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada/72273",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada",
+										"72273"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{base_bearer}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api-coordenada/72273",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api-coordenada",
+										"72273"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{base_bearer}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Consumo",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api-consumo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-consumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Teste de CREATE\",\r\n    \"qtde\": 5,\r\n    \"potencia_w\": \"5.00\",\r\n    \"minutos_por_dia\": 497,\r\n    \"dias_por_mes\": 30,\r\n    \"tensao_v\": null,\r\n    \"corrente_a\": null,\r\n    \"tipo_corrente\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-consumo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-consumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api-consumo/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-consumo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"[UPDATED 2] Teste de CREATE\",\r\n    \"qtde\": 20,\r\n    \"potencia_w\": 10,\r\n    \"minutos_por_dia\": 600,\r\n    \"dias_por_mes\": 15,\r\n    \"tensao_v\": null,\r\n    \"corrente_a\": null,\r\n    \"tipo_corrente\": \"CC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-consumo/18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-consumo",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-consumo/18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-consumo",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{base_bearer}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Dimensionamento",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-dimensionamento",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-dimensionamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"latitude\": \"-15.7723\",\r\n        \"longitude\": \"-47.8700\",\r\n        \"consumo_diario_cc_wh\": \"0.00\",\r\n        \"consumo_diario_ca_wh\": \"6678.84\",\r\n        \"potencia_instalada_cc_w\": \"0.00\",\r\n        \"potencia_instalada_ca_w\": \"624.00\",\r\n        \"efic_bateria\": \"0.86\",\r\n        \"efic_inversor\": \"0.90\",\r\n        \"efic_gerador\": \"0.75\",\r\n        \"efic_elet\": \"0.90\",\r\n        \"painel_id\": 5,\r\n        \"painel_qtde_total\": 70,\r\n        \"painel_qtde_serie\": 10,\r\n        \"mppt_id\": 2,\r\n        \"fator_seguranca\": \"1.25\",\r\n        \"bateria_id\": 3,\r\n        \"profundidade_descarga\": \"0.80\",\r\n        \"dias_autonomia\": 2,\r\n        \"tensao_nominal_cc\": 48\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-dimensionamento",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-dimensionamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api-dimensionamento/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-dimensionamento",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"latitude\": \"-89.7723\",\r\n        \"longitude\": \"-89.8700\",\r\n        \"consumo_diario_cc_wh\": \"0.00\",\r\n        \"consumo_diario_ca_wh\": \"10000.00\",\r\n        \"potencia_instalada_cc_w\": \"0.00\",\r\n        \"potencia_instalada_ca_w\": \"999.00\",\r\n        \"efic_bateria\": \"0.86\",\r\n        \"efic_inversor\": \"0.90\",\r\n        \"efic_gerador\": \"0.75\",\r\n        \"efic_elet\": \"0.90\",\r\n        \"painel_id\": 5,\r\n        \"painel_qtde_total\": 70,\r\n        \"painel_qtde_serie\": 10,\r\n        \"mppt_id\": 2,\r\n        \"fator_seguranca\": \"1.25\",\r\n        \"bateria_id\": 3,\r\n        \"profundidade_descarga\": \"0.80\",\r\n        \"dias_autonomia\": 2,\r\n        \"tensao_nominal_cc\": 48\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-dimensionamento/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-dimensionamento",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-dimensionamento/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-dimensionamento",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{base_bearer}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Site",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"teste@exemplo.com.br\",\r\n  \"password\": \"minha-senha\",\r\n  \"password_confirm\": \"minha-senha\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-site/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-site",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"teste@exemplo.com\",\r\n  \"password\": \"minha-senha\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api-site/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-site",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{base_bearer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api-site/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api-site",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://tcc-usp.leonardodelboni.com.br",
+			"type": "string"
+		},
+		{
+			"key": "base_bearer",
+			"value": "your-bearer-token-with-15-minutes-expiration",
+			"type": "string"
+		}
+	]
+}
