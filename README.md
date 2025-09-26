@@ -89,3 +89,22 @@ Todas as requisições, com exceção da criação de novo usuário, necessitam 
 - Atualização automática do `token_expiration`
 
 ---
+
+## 📹 Vídeos Explicativos
+
+Acesse os vídeos demonstrativos do sistema:
+
+### 🎯 Tutorial Completo da Plataforma
+
+| Vídeo | Descrição | Link |
+|-------|-----------|------|
+| **1️⃣ Cadastro na Plataforma** | Como se cadastrar no sistema | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/H2BWcAhJkkk) |
+| **2️⃣ Cenário 1 - Validação da Metodologia** | Validação por cenário da referência bibliográfica | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/L0RJVvT57Wk) |
+| **3️⃣ Cenário 2 - Estudo de Caso** | Cenário de iluminação Noturna de setor da USP/ESALQ | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/JVR_joAfxV4) |
+| **4️⃣  REST API e Postman** | Uso do Postman para validação e demonstração da REST API | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/7T5CEUKHYmI) |
+
+---
+
+*Projeto desenvolvido como TCC para MBA em Engenharia de Software - USP/ESALQ*
+
+---
